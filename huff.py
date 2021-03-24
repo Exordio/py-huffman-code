@@ -1,6 +1,8 @@
 import collections
 import heapq
 
+# from binarytree import build
+
 
 class Node(collections.namedtuple("Node", ["left", "right"])):
     def walk(self, code, acc):
@@ -20,6 +22,7 @@ def encode(s):
             h.append((freq, len(h), Leaf(ch)))
         heapq.heapify(h)
         print(h)
+        # print(build(h))
 
         count = len(h)
         while len(h) > 1:
